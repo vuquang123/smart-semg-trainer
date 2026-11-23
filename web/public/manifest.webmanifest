@@ -1,0 +1,5 @@
+{
+  "id":"/", "name":"SMART sEMG TRAINER", "short_name":"sEMG Trainer", "lang":"vi", "description":"Theo dõi hoạt động cơ và hỗ trợ luyện tập co–thả.",
+  "start_url":"/", "scope":"/", "display":"standalone", "orientation":"any", "background_color":"#f6f8f4", "theme_color":"#f6f8f4",
+  "icons":[{"src":"/icons/icon-192.png","sizes":"192x192","type":"image/png","purpose":"any"},{"src":"/icons/icon-512.png","sizes":"512x512","type":"image/png","purpose":"any"},{"src":"/icons/maskable-512.png","sizes":"512x512","type":"image/png","purpose":"maskable"}]
+}

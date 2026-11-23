@@ -1,0 +1,56 @@
+/* Muscle guide and review tools: calm instruction, readable analysis. */
+.muscle-illustration{margin:0;width:162px;height:150px;flex-shrink:0;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#6d8770}
+.muscle-illustration svg{width:100%;height:126px;overflow:visible}
+.arm-outline{fill:#f3f7ef;stroke:#809b82;stroke-width:2.35;stroke-linecap:round;stroke-linejoin:round}
+.muscle-glow{fill:#6bc894;opacity:0;transition:opacity .3s ease}
+.muscle-highlight{fill:#4f9c70;opacity:.22;transition:opacity .3s ease,fill .3s ease}
+.muscle-core{fill:#2d8559;opacity:.08;transition:opacity .3s ease,fill .3s ease}
+.muscle-fiber{fill:none;stroke:#fff;stroke-width:1.45;stroke-linecap:round;opacity:.34;transition:opacity .3s ease}
+.muscle-group{transform-origin:center;transform-box:fill-box;transition:transform .3s ease}
+.is-contracting .muscle-glow{opacity:.28;animation:muscle-glow-pulse 1.05s ease-in-out infinite alternate}
+.is-contracting .muscle-highlight{opacity:.9;fill:#2e8d5c;animation:muscle-contract 1.05s ease-in-out infinite alternate}
+.is-contracting .muscle-core{opacity:.52;fill:#7ce0a8}
+.is-contracting .muscle-fiber{opacity:.92}
+.is-contracting .muscle-group{animation:muscle-lift 1.05s ease-in-out infinite alternate}
+.is-relaxed .muscle-highlight{opacity:.22}.is-calibrating .muscle-highlight{opacity:.16}
+.muscle-illustration figcaption{font-size:11px;line-height:1.5;display:flex;align-items:center;justify-content:center;gap:6px;color:#6f866a}
+.muscle-illustration figcaption strong{font-weight:600;color:#486943}
+.muscle-illustration figcaption>span{font-size:10px;color:#8a9b81;padding:1px 6px;border-radius:10px;background:#eff4ea}
+.is-contracting figcaption>span{color:#276b47;background:#dff1e6;font-weight:500}
+.device-illustration .muscle-illustration{z-index:1}.welcome-mascot .muscle-illustration{height:154px;width:180px}
+.chart-legend{font-size:14px;line-height:1.5;gap:8px 20px;flex-wrap:wrap;color:#61785e;font-weight:500}
+.chart-legend>span{gap:7px}.legend-line{width:20px;flex-shrink:0}.chart-note{font-size:11px;line-height:1.6;color:#84977a}.chart-meta{font-size:12px}
+.chart-pan-mode{touch-action:none;cursor:grab;user-select:none}.chart-pan-mode:active{cursor:grabbing}
+.review-toolbar{margin:12px 0 4px;flex-shrink:0}.review-tools{display:flex;align-items:center;gap:5px;flex-wrap:wrap}.review-tools .icon-button{height:40px;width:40px;background:#f3f6ec;border-radius:9px;color:#6d8c5b}
+.review-reset,.review-drag{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:40px;padding:8px 10px;background:#f3f6ec;color:#718a60;border-radius:9px;font-size:11px}
+.review-drag{margin-left:auto}.review-drag[aria-pressed=true]{background:#e6f0de;color:#4b7b43}
+.review-position{display:flex;align-items:center;gap:14px;margin-top:10px;font-size:12px;color:#819571;line-height:1.5}.review-position>span{white-space:nowrap;min-width:100px;font-variant-numeric:tabular-nums}.review-position label{flex:1;min-width:50px}.review-position input{width:100%;min-height:32px;margin:0;accent-color:#789b5c;cursor:pointer}
+.review-hint{font-size:12px;line-height:1.6;color:#859b75;margin:-12px 0 14px}.rep-table-row{width:100%;background:transparent;text-align:left;cursor:pointer;border-radius:0}.rep-table-row:hover{background:#f5f9ee}.rep-table-row:focus-visible{position:relative;outline-offset:-3px}
+.audio-toggle{width:44px;height:44px;background:none;color:#7b9270;border-radius:10px;display:flex;align-items:center;justify-content:center}.audio-toggle:hover{background:#edf3e5}
+.audio-controls>p:first-child{font-size:13px;color:#839674;margin:10px 0 22px;line-height:1.7}.audio-controls select{width:100%;min-height:46px;font-size:15px}
+.audio-volume{display:block;margin-top:21px}.audio-volume>span{display:flex;justify-content:space-between;gap:10px;font-size:12px;color:#7e9570}.audio-volume strong{font-weight:500}.audio-volume input{width:100%;min-height:35px;accent-color:#719957;cursor:pointer}
+.audio-controls .toggle-row{padding:18px 0}.audio-controls .microcopy{font-size:11px;line-height:1.8;color:#8a9a7d}.audio-card h2{font-size:18px}
+.latency-panel{border-bottom:1px solid #e1e9d7;padding:0 0 21px;margin:23px 0}.latency-panel h3{font-size:14px;color:#6c875a}.latency-panel dl{margin:16px 0 19px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px 25px}.latency-panel dl>div{display:flex;flex-direction:column;gap:7px}.latency-panel dt{font-size:10px;color:#91a17f}.latency-panel dd{margin:0;font-size:13px;color:#688454;font-variant-numeric:tabular-nums}.latency-panel>p{font-size:11px;line-height:1.8}.latency-panel .microcopy{margin-bottom:0}
+@keyframes muscle-contract{from{opacity:.78;fill:#399665}to{opacity:.96;fill:#258051}}
+@keyframes muscle-glow-pulse{from{opacity:.18}to{opacity:.36}}
+@keyframes muscle-lift{from{transform:translateY(0)}to{transform:translateY(-1.5px)}}
+@media(max-width:760px){
+  .mobile-count-row .muscle-illustration{flex:0 1 112px;min-width:0;width:112px;height:98px;margin:18px 0 0}
+  .mobile-count-row .muscle-illustration svg{height:78px}.mobile-count-row .muscle-illustration figcaption{font-size:10px;gap:4px}.mobile-count-row .muscle-illustration figcaption>span{font-size:9px}
+  .mobile-instruction{text-align:left;align-items:flex-start;flex:0 0 auto;padding:8px 10px;background:#f1f6eb;border-radius:9px;min-height:0}
+  .mobile-instruction h2,.mobile-instruction.unconfirmed h2{font-size:16px;line-height:1.4;letter-spacing:-.2px}.mobile-instruction p{font-size:12px;line-height:1.5;margin-top:3px}
+  .mobile-signal-summary>span:last-child{font-size:12px;font-weight:500;line-height:1.4;max-width:66%}
+  .chart-legend,.mobile-signal-view .chart-legend{font-size:13px;line-height:1.5;gap:6px 13px;color:#637d59;margin-top:8px;font-weight:500}
+  .chart-legend>span{gap:6px}.legend-line{width:18px}.mobile-signal-view .chart-note,.chart-note{font-size:11px;line-height:1.5;color:#86967b}.mobile-signal-view .chart-meta{font-size:11px}
+  .mobile-signal-view .signal-card{padding:12px 12px 10px}.mobile-signal-view .chart-wrap{min-height:135px}.mobile-signal-view .chart-note{margin-top:6px}
+  .session-detail .chart-wrap{height:300px}.review-toolbar{margin-top:10px}.review-tools{gap:5px}.review-tools .icon-button{width:40px;height:40px}.review-reset,.review-drag{min-height:40px;padding:7px 9px;font-size:11px}
+  .review-position{gap:10px;font-size:11px}.review-position>span{min-width:95px}.review-hint{font-size:11px;margin-top:-9px}
+  .modal-sheet .audio-controls select{font-size:16px}.modal-sheet .audio-controls .field-label{font-size:13px}.modal-sheet .audio-controls .microcopy{font-size:12px}.audio-controls .button{min-height:46px;font-size:13px}
+  .latency-panel dl{gap:17px 15px}.latency-panel dd{font-size:12px}.latency-panel dt{font-size:10px}.latency-panel p{font-size:11px}
+}
+@media(max-width:370px){.mobile-count-row .muscle-illustration{flex-basis:92px;width:92px}.mobile-rep-count>strong{font-size:64px}.review-reset,.review-drag{font-size:10px;padding:7px 8px}.review-tools .icon-button{width:36px}.chart-legend,.mobile-signal-view .chart-legend{gap:6px 11px}}
+@media(max-width:760px) and (max-height:700px){
+  .mobile-count-row{justify-content:space-between;text-align:left;gap:10px;min-height:77px}.mobile-rep-count{justify-content:flex-start}.mobile-rep-count>strong{font-size:54px}.mobile-count-row .muscle-illustration{display:flex;width:83px;flex-basis:83px;height:77px;margin-top:12px}.mobile-count-row .muscle-illustration svg{height:61px}.mobile-count-row .muscle-illustration figcaption{font-size:9px}.mobile-count-row .muscle-illustration figcaption>span{display:none}.mobile-instruction{padding:6px 9px}.mobile-instruction h2{font-size:15px}.mobile-signal-view .chart-wrap{min-height:115px}.mobile-signal-view .chart-note{font-size:10px}
+}
+.delayed-label{font-size:11px;color:#ac8847;font-weight:500}
+@media(max-width:760px){.mobile-pane-signal .mobile-config{min-height:40px;padding-top:6px;padding-bottom:6px}.mobile-pane-signal .mobile-config-icon{display:none}.mobile-pane-signal .mobile-config-summary{flex-direction:row;align-items:center;flex-wrap:wrap;gap:3px 9px}.mobile-pane-signal .mobile-edit-settings>span{display:none}}
