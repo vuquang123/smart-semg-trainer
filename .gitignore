@@ -1,0 +1,93 @@
+# --- Web App (Node.js / Vite / TypeScript) ---
+web/node_modules/
+node_modules/
+web/dist/
+dist/
+*.tsbuildinfo
+coverage/
+web/public/docs/
+web/public/downloads/
+.sites-runtime/
+.openai/*.tar.gz
+
+# Local environment secrets (preserve .env.example)
+.env
+.env.local
+.env.*.local
+
+# --- ESP32 Firmware (ESP-IDF / CMake / GCC) ---
+firmware/build/
+**/build/
+firmware/managed_components/
+managed_components/
+.espressif/
+/components/.idf/
+**/components/.idf/
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+install_manifest.txt
+CTestTestfile.cmake
+
+# Generated ESP-IDF build artifacts and local config (preserve sdkconfig.defaults)
+*.bin
+*.elf
+*.map
+*.o
+*.a
+*.out
+*.exe
+flasher_args.json
+firmware/sdkconfig
+firmware/sdkconfig.old
+sdkconfig
+sdkconfig.old
+
+# Firmware local Wi-Fi and AEAD secrets (preserve emg_ui_secrets.example.h)
+firmware/main/emg_ui_secrets.h
+**/emg_ui_secrets.h
+
+# Native C host test generated outputs (preserve directory and any fixtures/sources)
+firmware/validation/test_*
+firmware/validation/*.exe
+firmware/validation/*.txt
+firmware/validation/*.pbm
+firmware/validation/*.json
+firmware/validation/*.jsonl
+firmware/validation/recorder_demo/
+
+# --- Python caches & virtual environments ---
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.egg-info/
+venv/
+.venv/
+env/
+
+# --- IDE, language servers & OS files ---
+.clangd
+.clangd/
+.ccls-cache/
+compile_commands.json
+.vscode/
+*.user
+*.workspace
+*.suo
+*.sln.docstates
+.DS_Store
+.AppleDouble
+.LSOverride
+.directory
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# --- Temporary files & logs ---
+*~
+*.swp
+*.swo
+*.bak
+*.tmp
+*.log
